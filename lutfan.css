@@ -1,0 +1,268 @@
+/* lutfan.css */
+
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background-color: #0e0e0e;
+  color: #ffffff;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 32px;
+  background: linear-gradient(to right, #1f1f1f, #2c2c2c);
+  border-bottom: 1px solid #333;
+}
+
+.logo {
+  font-size: 1.5em;
+  font-weight: bold;
+}
+
+.gradient-text {
+  background: linear-gradient(to right, #fff, #b99aff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.gradient-text-alt {
+  background: linear-gradient(to right, #a56eff, #ffffff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+#search {
+  padding: 10px 20px;
+  border-radius: 8px;
+  border: none;
+  background: #1c1c1c;
+  color: white;
+  font-size: 1em;
+  width: 300px;
+}
+
+.wrapper {
+  display: flex;
+  padding: 24px;
+  gap: 24px;
+}
+
+.sidebar {
+  width: 220px;
+}
+
+.main-content {
+  flex: 1.2; /* Dulu biasanya 1 */
+}
+
+.crypto-news {
+  width: 280px;
+}
+
+
+.sidebar h3 {
+  margin-bottom: 10px;
+  color: #ccc;
+  font-weight: 500;
+}
+
+.menu {
+  list-style: none;
+  padding: 0;
+}
+
+/* ✅ Gradient glowing animated list */
+.gradient-list {
+  background: linear-gradient(120deg, #8f44fd, #5e5eff);
+  color: white;
+  padding: 12px 16px;
+  border-radius: 10px;
+  margin-bottom: 14px;
+  font-weight: 500;
+  font-size: 0.95rem;
+  box-shadow: 0 0 10px #8f44fd44;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+}
+
+.gradient-list::before {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle at center, rgba(255, 255, 255, 0.1), transparent);
+  transform: scale(0);
+  transition: transform 0.4s ease;
+  z-index: -1;
+}
+
+.gradient-list:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 20px #a56eff88;
+}
+
+.gradient-list:hover::before {
+  transform: scale(1);
+}
+
+.main-content {
+  flex: 1;
+}
+
+.news-section {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.news-card {
+  background-color: #181818;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 2px 12px rgba(255, 255, 255, 0.05);
+  transition: transform 0.3s;
+  max-width: 600px;
+}
+
+.news-card:hover {
+  transform: translateY(-5px);
+}
+
+/* ✅ Fix image aspect ratio */
+.thumbnail {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+}
+
+.thumbnail img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+.news-info {
+  padding: 16px;
+}
+
+.news-info h2 {
+  margin-top: 0;
+  font-size: 16px;
+}
+
+.meta {
+  font-size: 0.85em;
+  color: #aaa;
+  margin-bottom: 12px;
+}
+
+.desc {
+  font-size: 0.95em;
+  line-height: 1.5em;
+  color: #ddd;
+}
+
+.btn-read {
+  display: inline-block;
+  margin-top: 12px;
+  color: #9c7dff;
+  text-decoration: none;
+  font-weight: 500;
+  transition: 0.2s;
+}
+
+.btn-read:hover {
+  color: #ffffff;
+}
+
+.crypto-news {
+  width: 480px; /* atau 300px sesuai keinginan */
+}
+
+
+
+.crypto-news h3 {
+  color: #ccc;
+  margin-bottom: 10px;
+}
+
+.crypto-list {
+  list-style: none;
+  padding: 0;
+}
+
+.crypto-list li {
+  background: #1b1b1b;
+  padding: 10px;
+  border-radius: 6px;
+  margin-bottom: 10px;
+  transition: 0.3s;
+}
+
+.crypto-list li:hover {
+  background: #2c2c2c;
+}
+
+/* ✨ LOGO BLOCKINTEL.ID SHIMMER ✨ */
+.logo-glow {
+  font-family: 'Poppins', sans-serif;
+  font-size: 28px;
+  font-weight: 700;
+  background: linear-gradient(90deg, #a855f7, #9333ea, #d946ef);
+  background-size: 300% 300%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: shimmer 3s infinite linear;
+}
+
+@keyframes shimmer {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 32px;
+  flex-wrap: wrap;
+}
+
+.left-header {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.logo-glow {
+  font-size: 28px;
+  font-weight: bold;
+  background: linear-gradient(90deg, #a855f7, #9333ea, #d946ef);
+  background-size: 300% 300%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: shimmer 3s infinite linear;
+}
+
+input[type="text"] {
+  padding: 8px 16px;
+  border-radius: 6px;
+  border: none;
+  background: #1c1c1c;
+  color: white;
+  font-size: 14px;
+  width: 220px;
+}
+
